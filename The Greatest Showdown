@@ -1,13 +1,31 @@
-# Task 1: Identify the Greatest
+# Using conditional statements
+def find_largest_number(num1, num2, num3):
+    if num1 >= num2 and num1 >= num3:
+        return num1
+    elif num2 >= num1 and num2 >= num3:
+        return num2
+    else:
+        return num3
+
+def find_smallest_number(num1, num2, num3):
+    if num1 <= num2 and num1 <= num3:
+        return num1
+    elif num2 <= num1 and num2 <= num3:
+        return num2
+    else:
+        return num3
+
+# Using max() and min() functions
 num1 = float(input("Enter the first number: "))
 num2 = float(input("Enter the second number: "))
 num3 = float(input("Enter the third number: "))
 
-largest = max(num1, num2, num3)
+largest_conditional = find_largest_number(num1, num2, num3)
+smallest_conditional = find_smallest_number(num1, num2, num3)
+largest_max = max(num1, num2, num3)
+smallest_min = min(num1, num2, num3)
 
-print("The largest number is", largest)
-
-# Task 2: Identify the Smallest
-smallest = min(num1, num2, num3)
-
-print("The smallest number is", smallest)
+print("The largest number using conditional statements is", largest_conditional)
+print("The smallest number using conditional statements is", smallest_conditional)
+print("The largest number using max() function is", largest_max)
+print("The smallest number using min() function is", smallest_min)
